@@ -1,55 +1,97 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>210</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>LinkablePart
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>20</x><y>0</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+LinkablePart
 --
 
 --
-+void execute(float p_pression) = 0</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>320</y><w>210</w><h>190</h></coordinates><panel_attributes>Wheel
++ execute(fp_pression: float) = 0 : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>490</y><w>210</w><h>190</h></coordinates><panel_attributes>Wheel
 --
 
 --
-+void executeRotation(float p_force)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>560</y><w>210</w><h>190</h></coordinates><panel_attributes>Gear
++ executeRotation(p_force: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>250</y><w>210</w><h>190</h></coordinates><panel_attributes>Gear
 --
--int demultiplier
+- demultiplier: int
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>460</y><w>210</w><h>170</h></coordinates><panel_attributes>GearLever
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>990</y><w>210</w><h>170</h></coordinates><panel_attributes>GearLever
 --
+- gears: Gear[ ]
 - level: int 
-- gears: Gear[]
 --
 + change(): void
 + activeGear(): Gear*
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>510</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>ExplosionChamber
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>60</y><w>210</w><h>190</h></coordinates><panel_attributes>Single
+- crankshaft : Crankshaft*
 --
--id: Long
-_-ClassAttribute: Long_
++ fill(p_volume : float) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>730</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Singleton&gt;&gt;
+Singleton&lt;GearLever&gt;
 --
-#Operation(i: int): int
-/+AbstractOperation()/
+_- instance : GearLever*_
 --
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>240</y><w>210</w><h>190</h></coordinates><panel_attributes>Singleton
---
-- instance: T*
---
-+ getInstance(): T*
+_+ getInstance(): GearLever*_
 - Singleton()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>910</y><w>110</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>750</x><y>20</y><w>210</w><h>190</h></coordinates><panel_attributes>Pedal
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>420</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>10</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Stereotype&gt;&gt;
-Package::FatClass
-{Some Properties}
+- target: LinkablePart*
 --
--id: Long
-_-ClassAttribute: Long_
---
-#Operation(i: int): int
-/+AbstractOperation()/
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>470</y><w>210</w><h>190</h></coordinates><panel_attributes>Transmission
++ setTarget(p_part: LinkablePart*): void
++ use(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>530</y><w>210</w><h>190</h></coordinates><panel_attributes>Transmission
 --
  - wheels: vector&lt;Wheel*&gt;
 --
-#Operation(i: int): int
-/+Ab</panel_attributes><additional_attributes></additional_attributes></element></diagram>
++ activate(p_force : float) : void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>260</y><w>210</w><h>190</h></coordinates><panel_attributes>Crankshaft
+--
+ - transmission : Transmission*
+--
++ receiveForce(p_volume : float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>430</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>260</y><w>210</w><h>190</h></coordinates><panel_attributes>Injector
+--
+ - explosionChamber: ExplosionChamber*
+--
++ execute(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>10</y><w>210</w><h>190</h></coordinates><panel_attributes>Motor
+--
+ - injector: Injector
+- explosionChamber: ExplosionChamber
+- crankshaft: Crankshaft
+--
++ connectToTransmission(p_transmission: Transmission*): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>770</x><y>520</y><w>210</w><h>190</h></coordinates><panel_attributes>Direction
+--
+- wheels: Wheel[ ]
+--
++ turn(p_angle: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>660</y><w>210</w><h>190</h></coordinates><panel_attributes>DAE
+--
+- direction: Direction*
+- force: float
+--
++ use(p_angle: float): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>750</y><w>210</w><h>190</h></coordinates><panel_attributes>SteerWheel
+--
+- dae: DAE* 
+--
++ turn(p_angle: float): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>750</y><w>210</w><h>190</h></coordinates><panel_attributes>Brake
+--
+- wheel: Wheel*
+--
++ execute(p_force: float): void
++ attackWheel(p_wheel: Wheel*): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>270</y><w>210</w><h>190</h></coordinates><panel_attributes>BrakeController
+--
+- brakes : Brake[ ]
+--
++ execute(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>130</x><y>180</y><w>280</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;260;90</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>170</y><w>50</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>30;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>970</y><w>210</w><h>190</h></coordinates><panel_attributes>Cockpit
+--
+- pedal : Pedal
+- steerWheel : SteerWheel
+- gearLever : GearLever
+--
++ managePedal(): void
++ manageSteerWheel(): void
++ manageGearLever(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>980</y><w>210</w><h>190</h></coordinates><panel_attributes>Electronics
+--
+- dae: DAE
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>320</x><y>1210</y><w>210</w><h>190</h></coordinates><panel_attributes>Car
+--
+- brakeController: BrakeController
+- direction: Direction
+- transmission: Transmission
+- motor: Motor
+- electronics: Electronics
+- cockpit: Cockpit
+--</panel_attributes><additional_attributes></additional_attributes></element></diagram>
