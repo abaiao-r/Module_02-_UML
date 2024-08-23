@@ -1,28 +1,28 @@
-<diagram program="umletino" version="15.1"><zoom_level>4</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>596</x><y>12</y><w>84</w><h>76</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>1</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>792</x><y>535</y><w>21</w><h>19</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
 LinkablePart
 --
 
 --
-+ execute(fp_pression: float) = 0 : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>932</x><y>1468</y><w>84</w><h>76</h></coordinates><panel_attributes>Wheel
++ execute(fp_pression: float) = 0 : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>498</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Wheel
 --
 
 --
-+ executeRotation(p_force: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1200</x><y>884</y><w>84</w><h>76</h></coordinates><panel_attributes>Gear
++ executeRotation(p_force: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>307</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Gear
 --
 - demultiplier: int
 --
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>972</x><y>936</y><w>84</w><h>68</h></coordinates><panel_attributes>GearLever
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>337</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>GearLever
 --
 - gears: Gear[ ]
 - level: int 
 --
 + change(): void
 + activeGear(): Gear*
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>308</x><y>228</y><w>84</w><h>76</h></coordinates><panel_attributes>ExplosionChamber
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>728</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>ExplosionChamber
 --
 - crankshaft : Crankshaft*
 --
-+ fill(p_volume : float) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>976</x><y>788</y><w>92</w><h>76</h></coordinates><panel_attributes>&lt;&lt;Singleton&gt;&gt;
++ fill(p_volume : float) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>336</x><y>535</y><w>23</w><h>19</h></coordinates><panel_attributes>&lt;&lt;Singleton&gt;&gt;
 Singleton&lt;GearLever&gt;
 --
 _- instance : GearLever*_
@@ -30,52 +30,52 @@ _- instance : GearLever*_
 _+ getInstance(): GearLever*_
 - Singleton()
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1008</x><y>860</y><w>28</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;190</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1084</x><y>1056</y><w>84</w><h>76</h></coordinates><panel_attributes>Pedal
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>368</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Pedal
 --
 - target: LinkablePart*
 --
 + setTarget(p_part: LinkablePart*): void
-+ use(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>468</x><y>1200</y><w>84</w><h>76</h></coordinates><panel_attributes>Transmission
++ use(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>629</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Transmission
 --
  - wheels: vector&lt;Wheel*&gt;
 --
-+ activate(p_force : float) : void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>260</y><w>84</w><h>76</h></coordinates><panel_attributes>Crankshaft
++ activate(p_force : float) : void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>662</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Crankshaft
 --
  - transmission : Transmission*
 --
-+ receiveForce(p_volume : float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>460</x><y>140</y><w>84</w><h>76</h></coordinates><panel_attributes>Injector
++ receiveForce(p_volume : float)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>762</x><y>567</y><w>21</w><h>19</h></coordinates><panel_attributes>Injector
 --
  - explosionChamber: ExplosionChamber*
 --
-+ execute(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>88</x><y>148</y><w>84</w><h>76</h></coordinates><panel_attributes>Motor
++ execute(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>695</x><y>568</y><w>20</w><h>19</h></coordinates><panel_attributes>Motor
 --
  - injector: Injector
 - explosionChamber: ExplosionChamber
 - crankshaft: Crankshaft
 --
-+ connectToTransmission(p_transmission: Transmission*): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>852</x><y>1152</y><w>84</w><h>76</h></coordinates><panel_attributes>Direction
++ connectToTransmission(p_transmission: Transmission*): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>466</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Direction
 --
 - wheels: Wheel[ ]
 --
-+ turn(p_angle: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1076</x><y>1424</y><w>84</w><h>76</h></coordinates><panel_attributes>DAE
++ turn(p_angle: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>532</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>DAE
 --
 - direction: Direction*
 - force: float
 --
-+ use(p_angle: float): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1044</x><y>1164</y><w>84</w><h>76</h></coordinates><panel_attributes>SteerWheel
++ use(p_angle: float): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>431</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>SteerWheel
 --
 - dae: DAE* 
 --
-+ turn(p_angle: float): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>864</x><y>660</y><w>84</w><h>76</h></coordinates><panel_attributes>Brake
++ turn(p_angle: float): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>853</x><y>567</y><w>21</w><h>19</h></coordinates><panel_attributes>Brake
 --
 - wheel: Wheel*
 --
 + execute(p_force: float): void
-+ attackWheel(p_wheel: Wheel*): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>740</x><y>148</y><w>84</w><h>76</h></coordinates><panel_attributes>BrakeController
++ attackWheel(p_wheel: Wheel*): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>823</x><y>567</y><w>21</w><h>19</h></coordinates><panel_attributes>BrakeController
 --
 - brakes : Brake[ ]
 --
-+ execute(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>84</y><w>144</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;340;160</additional_attributes></element><element><id>Relation</id><coordinates><x>496</x><y>84</y><w>144</w><h>64</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>948</x><y>1044</y><w>84</w><h>76</h></coordinates><panel_attributes>Cockpit
++ execute(p_pression: float): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>805</x><y>553</y><w>31</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;290;140</additional_attributes></element><element><id>Relation</id><coordinates><x>771</x><y>553</y><w>32</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>300;10;10;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>397</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Cockpit
 --
 - pedal : Pedal
 - steerWheel : SteerWheel
@@ -83,10 +83,10 @@ _+ getInstance(): GearLever*_
 --
 + managePedal(): void
 + manageSteerWheel(): void
-+ manageGearLever(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>712</x><y>1156</y><w>84</w><h>76</h></coordinates><panel_attributes>Electronics
++ manageGearLever(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>564</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Electronics
 --
 - dae: DAE
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>632</x><y>316</y><w>84</w><h>76</h></coordinates><panel_attributes>Car
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>596</x><y>568</y><w>21</w><h>19</h></coordinates><panel_attributes>Car
 --
 - brakeController: BrakeController
 - direction: Direction
@@ -94,4 +94,4 @@ _+ getInstance(): GearLever*_
 - motor: Motor
 - electronics: Electronics
 - cockpit: Cockpit
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>188</y><w>340</w><h>124</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;830;290</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>200</y><w>148</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;350;190</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>172</y><w>300</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;730;30</additional_attributes></element><element><id>Relation</id><coordinates><x>1028</x><y>1060</y><w>108</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;250;340</additional_attributes></element><element><id>Relation</id><coordinates><x>1028</x><y>968</y><w>36</w><h>96</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;220;70;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1028</x><y>1084</y><w>148</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;20;350;10</additional_attributes></element><element><id>Relation</id><coordinates><x>712</x><y>188</y><w>120</w><h>172</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;410;280;10</additional_attributes></element><element><id>Relation</id><coordinates><x>708</x><y>380</y><w>16</w><h>828</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>20;10;10;2050</additional_attributes></element><element><id>Relation</id><coordinates><x>168</x><y>180</y><w>556</w><h>188</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>1370;450;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>548</x><y>364</y><w>176</w><h>880</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>420;10;10;2180</additional_attributes></element><element><id>Relation</id><coordinates><x>712</x><y>376</y><w>148</w><h>832</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;350;2060</additional_attributes></element><element><id>Relation</id><coordinates><x>712</x><y>328</y><w>244</w><h>788</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;590;1950</additional_attributes></element><element><id>Relation</id><coordinates><x>932</x><y>1200</y><w>92</w><h>324</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;210;790</additional_attributes></element><element><id>Relation</id><coordinates><x>820</x><y>180</y><w>52</w><h>528</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;1300</additional_attributes></element><element><id>Relation</id><coordinates><x>792</x><y>1196</y><w>292</w><h>280</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;710;680</additional_attributes></element><element><id>Relation</id><coordinates><x>548</x><y>1244</y><w>392</w><h>288</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;960;700</additional_attributes></element><element><id>Relation</id><coordinates><x>548</x><y>300</y><w>44</w><h>928</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>90;10;10;2300</additional_attributes></element><element><id>Relation</id><coordinates><x>388</x><y>272</y><w>120</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;280;100</additional_attributes></element><element><id>Relation</id><coordinates><x>388</x><y>192</y><w>80</w><h>72</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>180;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>1204</y><w>44</w><h>248</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;90;600</additional_attributes></element><element><id>Relation</id><coordinates><x>932</x><y>1184</y><w>152</w><h>284</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>360;690;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1048</x><y>928</y><w>156</w><h>44</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;90;370;10</additional_attributes></element></diagram>
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>682</x><y>581</y><w>15</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>714</x><y>581</y><w>16</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>714</x><y>562</y><w>50</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;130;70;130;70;10;410;10;410;130;480;130</additional_attributes></element><element><id>Relation</id><coordinates><x>417</x><y>576</y><w>16</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;10;140;10</additional_attributes></element><element><id>Relation</id><coordinates><x>357</x><y>563</y><w>42</w><h>18</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>400;160;350;160;350;10;50;10;50;160;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>388</x><y>580</y><w>11</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>529</y><w>235</w><h>47</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;450;60;450;60;20;2330;10;2330;450;2280;450</additional_attributes></element><element><id>Relation</id><coordinates><x>584</x><y>582</y><w>14</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>558</y><w>81</w><h>23</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;210;80;210;80;10;710;10;710;210;790;210</additional_attributes></element><element><id>Relation</id><coordinates><x>616</x><y>581</y><w>15</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;10;130;10</additional_attributes></element><element><id>Relation</id><coordinates><x>486</x><y>583</y><w>112</w><h>16</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>1100;20;1040;20;1040;140;70;140;70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>417</x><y>559</y><w>181</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>1790;180;1730;180;1730;10;60;10;60;130;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>518</x><y>579</y><w>16</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>843</x><y>577</y><w>12</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;10;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>552</x><y>578</y><w>14</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>120;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>518</x><y>583</y><w>113</w><h>10</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>1110;20;1060;20;1060;80;70;80;70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>649</x><y>574</y><w>15</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>130;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>682</x><y>583</y><w>48</w><h>13</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>460;10;380;10;380;110;50;110;50;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>748</x><y>580</y><w>16</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>140;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>451</x><y>564</y><w>83</w><h>17</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>10;150;100;150;100;10;740;10;740;120;810;120</additional_attributes></element><element><id>Relation</id><coordinates><x>327</x><y>582</y><w>12</w><h>3</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-&gt;</panel_attributes><additional_attributes>100;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>346</x><y>553</y><w>3</w><h>17</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element></diagram>
